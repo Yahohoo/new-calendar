@@ -12,7 +12,8 @@
     <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
     <script>
       const schedStateKey = '__sched_state'
-      const mainSchedUrl = 'http://192.168.1.101:8080/'
+      // const mainSchedUrl = 'http://192.168.1.101:8080/'
+      const mainSchedUrl = 'https://yahohoo.github.io/new-calendar/'
 
       function getSchedUrl() {
         const urlParams = getUrlParams()
@@ -38,7 +39,7 @@
           currentParams += '&'
         }
 
-        const newParams = `?${currentParams}${schedStateKey}=${encodeURI(JSON.stringify(params))}`
+        const newParams = `?${currentParams}${schedStateKey}=${params}`
         window.history.pushState({}, '', newParams)
       }
 
